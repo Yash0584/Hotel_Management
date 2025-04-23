@@ -1,0 +1,173 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004466;
+    padding: 15px 40px;
+    color: #fff;
+  }
+  
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #0077aa;
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Rooms */
+  .rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .room-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .room-card h3 {
+    margin-bottom: 10px;
+    color: #004466;
+  }
+  
+  /* Facilities */
+  .facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .facility-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .facility-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Login & Signup */
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #004466;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .form-container button:hover {
+    background-color: #005577;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004466;
+    color: white;
+    margin-top: 50px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  }
+  

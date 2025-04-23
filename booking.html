@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Room Booking</h1>
+        <form action="booking.php" method="POST">
+
+
+            <div class="form-group">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select a room type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="check-in">Check-in Date</label>
+                <input type="date" id="check-in" name="check-in" required>
+            </div>
+            <div class="form-group">
+                <label for="check-out">Check-out Date</label>
+                <input type="date" id="check-out" name="check-out" required>
+            </div>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <fieldset class="form-group1">
+                <legend>Facilities Available</legend>
+                <label>
+                    <input type="checkbox" name="facilities[]" value="gym"> Gym
+                </label><br>
+                <label>
+                    <input type="checkbox" name="facilities[]" value="restaurant"> Restaurant
+                </label><br>
+                <label>
+                    <input type="checkbox" name="facilities[]" value="spa"> Spa
+                </label><br>
+                <label>
+                    <input type="checkbox" name="facilities[]" value="pool"> Pool
+                </label><br>
+                <label>
+                    <input type="checkbox" name="facilities[]" value="others"> Others
+                </label>
+            </fieldset>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>

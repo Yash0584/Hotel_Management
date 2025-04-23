@@ -1,0 +1,131 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-image: url(Hotel3.jpg);*/
+    background-image: url(DALL·E\ 2025-02-14\ 15.08.50\ -\ a\ modern\ and\ elegant\ hotel\ entrance\ suitable\ for\ a\ hotel\ management\ project.\ The\ scene\ should\ feature\ a\ grand\ entrance\ with\ glass\ doors\,\ a\ sleek\ canop.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background : linear-gradient(135deg, #ffdd00, #8bc34a, #388e3c); / Background gradient */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #d4af37; /* Gold color */
+}
+
+/* Centering the form container */
+main {
+    max-width: 600px;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+main h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form field styling */
+.form-group,
+.form-group1 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label, .form-group1 legend {
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+/* Facilities fieldset styling */
+fieldset.form-group1 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.form-group1 label {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Button styling */
+.btn {
+    background-color: #d4af37;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c09e3d;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    margin-top: auto;
+}
