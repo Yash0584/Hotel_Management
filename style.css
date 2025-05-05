@@ -1,131 +1,205 @@
-/* General reset */
-* {
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    /*background-image: url(Hotel3.jpg);*/
-    background-image: url(DALL·E\ 2025-02-14\ 15.08.50\ -\ a\ modern\ and\ elegant\ hotel\ entrance\ suitable\ for\ a\ hotel\ management\ project.\ The\ scene\ should\ feature\ a\ grand\ entrance\ with\ glass\ doors\,\ a\ sleek\ canop.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /*background : linear-gradient(135deg, #ffdd00, #8bc34a, #388e3c); / Background gradient */
-    color: #333;
-    display: flex;
-    flex-direction: column;
+    color: #fff;
     min-height: 100vh;
 }
 
-/* Header styles */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.payment-page {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
 header {
-    background-color: #333;
-    padding: 15px 0;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #d4af37; /* Gold color */
-}
-
-/* Centering the form container */
-main {
-    max-width: 600px;
-    background-color: #fff;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-main h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Form field styling */
-.form-group,
-.form-group1 {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label, .form-group1 legend {
-    color: #333;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input, .form-group select {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: fixed;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s;
+    top: 0;
+    z-index: 1000;
 }
 
-.form-group input:focus, .form-group select:focus {
-    border-color: #d4af37;
-    outline: none;
-}
-
-/* Facilities fieldset styling */
-fieldset.form-group1 {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-.form-group1 label {
-    font-weight: normal;
-    color: #555;
-}
-
-/* Button styling */
-.btn {
-    background-color: #d4af37;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #c09e3d;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
+.payment-form-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 500px;
+    margin: 100px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    bottom: 0;
+    overflow: hidden;
+}
+
+.payment-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.payment-form h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
     width: 100%;
-    font-size: 14px;
-    margin-top: auto;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4ecdc4;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
+}
+
+.card-details-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-details-section label {
+    display: block;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.card-details-section .form-group {
+    margin-bottom: 25px;
+}
+
+.payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.payment-buttons .btn {
+    width: 48%;
+    padding: 16px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.payment-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+    background: linear-gradient(45deg, #ff6b6b, #45b7d1);
+}
+
+.form-links {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-links p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.form-links a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-links a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
 }

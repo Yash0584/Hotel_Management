@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Hotel Management</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -19,32 +22,53 @@
     </header>
 
     <section class="signup-form">
-        <h1>Sign Up</h1>
+        <h1>Create an Account</h1>
         <form action="signup.php" method="POST">
-
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+            <div class="form-container">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="Enter your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Choose a username">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Sign Up</button>
+                </div>
+                <div class="form-links">
+                    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <button type="submit" class="btn">Sign Up</button>
         </form>
-        <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Hotel Management. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

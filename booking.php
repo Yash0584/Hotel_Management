@@ -38,7 +38,16 @@ $sql = "INSERT INTO bookings (room_type, check_in, check_out, full_name, email, 
         VALUES ('$room_type', '$check_in', '$check_out', '$full_name', '$email', '$facilities')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<h2>Booking successful!</h2><p><a href='index.html'>Return to Home</a></p>";
+    // Get the last inserted booking ID
+    $booking_id = $conn->insert_id;
+    
+    // Assuming you have a session or method to get the user_id (e.g., from session or authentication)
+    // Here, for simplicity, let's assume we pass the user ID from the form
+    $user_id = 1; // Replace this with actual user data, e.g., from $_SESSION['user_id']
+    
+    // Redirect to payment page with booking ID and user ID
+    header("Location: payment.html?id=$user_id&booking_id=$booking_id");
+    exit(); // Stop script execution after the redirect
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
